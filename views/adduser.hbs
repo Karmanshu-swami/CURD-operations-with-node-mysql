@@ -1,0 +1,17 @@
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Add user</li>
+    </ol>
+</nav>
+
+{{#if id}}
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>New row inserted with id = {{id}}</strong>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{{/if}}
+
+<form class="row g-3" action="/addnewuser" method="post">
+    {{> userform}}
+</form>

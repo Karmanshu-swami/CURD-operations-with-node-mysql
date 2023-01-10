@@ -1,0 +1,46 @@
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">View user</li>
+    </ol>
+</nav>
+
+<form class="row g-3">
+    {{#each rows}}
+    <div class="col-md-6">
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="floatingInput" placeholder="First Name" name="usr_firstName"
+                value="{{this.usr_firstName}}" disabled>
+            <label for="floatingInput">First Name</label>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="floatingInput" placeholder="Last Name" name="usr_lastName"
+                value="{{this.usr_lastName}}" disabled>
+            <label for="floatingInput">Last Name</label>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="floatingInput" placeholder="Email" name="usr_email"
+                value="{{this.usr_email}}" disabled>
+            <label for="floatingInput">Email</label>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="floatingInput" placeholder="Phone" name="usr_phone"
+                value="{{this.usr_phone}}" disabled>
+            <label for="floatingInput">Phone</label>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div class="form-floating mb-3">
+            <textarea class="form-control" id="floatingInput" placeholder="Comment" name="usr_comments"
+                style="height: 200px;" disabled>{{this.usr_comments}}</textarea>
+            <label for="floatingInput">Comment</label>
+        </div>
+    </div>
+    {{/each}}
+</form>
